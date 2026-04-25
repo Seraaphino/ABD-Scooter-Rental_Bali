@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABD Scooter Rental — Explore Bali With Freedom</title>
+  <meta name="description" content="Sewa scooter Bali harian/mingguan/bulanan. Unit terawat, harga transparan, delivery ke hotel/villa. ABD Scooter Rental — Bali, but make it freedom.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav class="navbar" id="mainNav">
+  <div class="navbar-inner">
+    <a href="#top" class="navbar-brand">
+      <div class="brand-icon">🛵</div>
+      <div class="brand-text">ABD <span>Scooter</span></div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#fleet" class="nav-link" data-i18n="nav_fleet">Unit</a></li>
+      <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Harga</a></li>
+      <li><a href="#calculator" class="nav-link" data-i18n="nav_calc">Kalkulator</a></li>
+      <li><a href="#delivery" class="nav-link" data-i18n="nav_delivery">Delivery</a></li>
+      <li><a href="#about" class="nav-link" data-i18n="nav_about">Tentang</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Language Switcher -->
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-btn" id="langToggle" aria-label="Change language">
+          <span id="currentFlag">🇮🇩</span>
+          <span id="currentLang">ID</span>
+          <i class="bi bi-chevron-down" style="font-size:0.7rem;"></i>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button class="lang-option active" data-lang="id">
+            <span class="flag">🇮🇩</span> Bahasa Indonesia
+          </button>
+          <button class="lang-option" data-lang="en">
+            <span class="flag">🇬🇧</span> English
+          </button>
+          <button class="lang-option" data-lang="ru">
+            <span class="flag">🇷🇺</span> Русский
+          </button>
+          <button class="lang-option" data-lang="de">
+            <span class="flag">🇩🇪</span> Deutsch
+          </button>
+          <button class="lang-option" data-lang="fr">
+            <span class="flag">🇫🇷</span> Français
+          </button>
+          <button class="lang-option" data-lang="zh">
+            <span class="flag">🇨🇳</span> 中文
+          </button>
+        </div>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="btn-icon" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="bi bi-moon-stars" id="themeIcon"></i>
+      </button>
+
+      <!-- Book Now -->
+      <button class="btn-book-now" id="openBooking" data-i18n="btn_book_now">
+        <i class="bi bi-lightning-charge-fill"></i>
+        <span>Booking Cepat</span>
+      </button>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-links">
+    <a href="#fleet" data-i18n="nav_fleet">Unit</a>
+    <a href="#pricing" data-i18n="nav_pricing">Harga</a>
+    <a href="#calculator" data-i18n="nav_calc">Kalkulator</a>
+    <a href="#delivery" data-i18n="nav_delivery">Delivery</a>
+    <a href="#about" data-i18n="nav_about">Tentang</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="mobile-nav-footer">
+    <button class="btn-book-now" onclick="openModal()" data-i18n="btn_book_now">
+      <i class="bi bi-lightning-charge-fill"></i> Booking Cepat
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section id="top" class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <!-- Left Column -->
+    <div class="hero-left" data-aos data-aos-delay="0">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-i18n="hero_badge">Bali • Tersedia Sekarang</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Explore Bali,</span><br>
+        <span class="highlight" data-i18n="hero_title_2">Tanpa Ribet.</span>
+      </h1>
+
+      <p class="hero-desc" data-i18n="hero_desc">
+        Sewa scooter yang <strong>terawat</strong>, booking <strong>cepat</strong>,
+        dan bisa <strong>delivery</strong> ke hotel/villa kamu.
+        Biar liburanmu fokus ke pengalaman — bukan drama transport.
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn-primary" id="heroBookBtn">
+          <i class="bi bi-send-fill"></i>
+          <span data-i18n="btn_start_book">Mulai Booking</span>
+        </button>
+        <a href="#pricing" class="btn-secondary">
+          <i class="bi bi-tag"></i>
+          <span data-i18n="btn_see_price">Lihat Harga</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label" data-i18n="stat_happy">Happy Riders</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label" data-i18n="stat_models">Model Scooter</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label" data-i18n="stat_support">Support</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9★</div>
+          <div class="stat-label" data-i18n="stat_rating">Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column — Hero Card -->
+    <div class="hero-visual" data-aos data-aos-delay="150">
+      <div class="float-badge top-left">
+        <div class="fb-label" data-i18n="hero_card_from">Mulai dari</div>
+        <div class="fb-value">Rp 100K</div>
+        <div class="fb-sub" data-i18n="hero_card_day">/ hari</div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-label">
+          <div>
+            <div style="font-size:0.78rem; color:var(--text-muted);" data-i18n="hero_most_booked">Paling sering dibooking</div>
+            <div class="hero-card-title">NMAX / PCX</div>
+          </div>
+          <span class="badge-popular" data-i18n="hero_touring">Touring friendly</span>
+        </div>
+
+        <img
+          src="https://sspark.genspark.ai/cfimages?u1=8GgQ3n9eKpiImDPC%2FnZRxF6WmZBdNcTXs7Ziih3QMBXnlXpp%2BQ8E6vl3t5nI0ziWoumWLkN35JVNOfYFo8M1pwu2JU3J3444%2BMH2obpqfiYDl4q%2FutzwkQUwlXwQ5RewqffgYHKy4Op98g9O3rHiX03wBCw1%2FhMF2ZcZQvYdYlm4yXRnRR7iwgs%3D&u2=4edwNE6qJoHuWdcQ&width=2560"
+          alt="NMAX / PCX Scooter Bali"
+          class="hero-img"
+          loading="lazy"
+        >
+
+        <div class="hero-chips">
+          <span class="chip"><i class="bi bi-shield-check"></i> <span data-i18n="chip_helmet">Helm Gratis</span></span>
+          <span class="chip"><i class="bi bi-fuel-pump"></i> <span data-i18n="chip_fuel">Irit BBM</span></span>
+          <span class="chip"><i class="bi bi-truck"></i> Delivery</span>
+        </div>
+      </div>
+
+      <div class="float-badge bottom-right">
+        <div class="fb-label" data-i18n="hero_delivery">Delivery</div>
+        <div class="fb-value" data-i18n="hero_free">Gratis</div>
+        <div class="fb-sub" data-i18n="hero_to_hotel">ke hotel/villa</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint">
+    <span data-i18n="scroll_down">Scroll ke bawah</span>
+    <div class="scroll-arrow"><i class="bi bi-chevron-down"></i></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+============================================================ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <i class="bi bi-shield-fill-check"></i>
+      <span data-i18n="trust_maintained">Unit servis berkala</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <i class="bi bi-clock-fill"></i>
+      <span data-i18n="trust_fast">Booking cepat via WhatsApp</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <i class="bi bi-geo-alt-fill"></i>
+      <span data-i18n="trust_delivery">Delivery ke Canggu, Seminyak, Denpasar</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <i class="bi bi-tag-fill"></i>
+      <span data-i18n="trust_price">Harga transparan, no hidden cost</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <i class="bi bi-chat-dots-fill"></i>
+      <span data-i18n="trust_24">Responsif 24/7</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FLEET / UNIT SECTION
+============================================================ -->
+<section id="fleet" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-tag"><i class="bi bi-scooter"></i> <span data-i18n="fleet_tag">Armada Kami</span></div>
+      <h2 class="section-title" data-i18n="fleet_title">Pilihan Unit Scooter</h2>
+      <p class="section-desc" data-i18n="fleet_desc">Dari city-ride santai sampai maxi scooter premium untuk touring. Semua terawat dan siap jalan.</p>
+    </div>
+
+    <div class="fleet-filter" data-aos>
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua</button>
+      <button class="filter-btn" data-filter="city" data-i18n="filter_city">City Ride</button>
+      <button class="filter-btn" data-filter="maxi" data-i18n="filter_maxi">Maxi Scooter</button>
+    </div>
+
+    <div class="fleet-grid">
+      <!-- Scoopy / Vario -->
+      <div class="fleet-card" data-type="city" data-aos>
+        <div class="fleet-card-img-wrap">
+          <img
+            src="https://sspark.genspark.ai/cfimages?u1=jfSmEGTZDMQaAvLkzYTdrszgtvgWmNLHDu9og%2FCZo2WXvLKp%2FFMv5RdnGbMgrbEuhY0%2F5fQA2zLMlaLenlPSEkgDBbWNs%2FpvdPO6H6HNew%3D%3D&u2=BU0IBB2C7asS5LRL&width=2560"
+            alt="Honda Scoopy / Vario"
+            class="fleet-card-img"
+            loading="lazy"
+          >
+          <span class="fleet-card-badge badge-best" data-i18n="badge_best_val">Best Value</span>
+        </div>
+        <div class="fleet-card-body">
+          <div class="fleet-cat" data-i18n="cat_city">City Ride</div>
+          <div class="fleet-name">Scoopy / Vario</div>
+          <div class="fleet-features">
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="scoopy_f1">Lincah di jalanan Bali</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="scoopy_f2">Cocok buat first timer</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="scoopy_f3">Harga paling ramah di kantong</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="scoopy_f4">Gampang parkir di mana aja</span></div>
+          </div>
+          <div class="fleet-price-row">
+            <div>
+              <div class="fleet-price-from" data-i18n="from_text">Mulai dari</div>
+              <div style="display:flex;align-items:baseline;gap:4px;">
+                <div class="fleet-price-val" id="scoopyPrice">Rp 100K</div>
+                <div class="fleet-price-unit" data-i18n="per_day">/hari</div>
+              </div>
+            </div>
+            <button class="btn-fleet-book" onclick="openBookingFor('Scoopy/Vario')" data-i18n="btn_book">Book Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NMAX / PCX -->
+      <div class="fleet-card" data-type="maxi" data-aos data-aos-delay="80">
+        <div class="fleet-card-img-wrap">
+          <img
+            src="https://sspark.genspark.ai/cfimages?u1=5kPxXvUBZXnAWoZPFTaOIlX8Kl1LbqkCsjpZLVnf6SJI8J01%2FZw5xBGA2a1CkZOt3dKDEOHzcOr3J%2BuTiJuKKSJhkFbN8epnNgA71t3OnVceaXyMV0AfsS9Py38Xc9kCTMVD9uqoF8Eqf9h6QZQHQjvXPQo%3D&u2=13irG46LNkdsZaCG&width=2560"
+            alt="Yamaha NMAX / Honda PCX"
+            class="fleet-card-img"
+            loading="lazy"
+          >
+          <span class="fleet-card-badge badge-popular-2" data-i18n="badge_most_booked">Most Booked</span>
+        </div>
+        <div class="fleet-card-body">
+          <div class="fleet-cat" data-i18n="cat_maxi">Maxi Comfort</div>
+          <div class="fleet-name">NMAX / PCX</div>
+          <div class="fleet-features">
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="nmax_f1">Nyaman untuk perjalanan jauh</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="nmax_f2">Stabil dan enak dibawa</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="nmax_f3">Pas buat couple trip</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="nmax_f4">Pilihan paling populer di Bali</span></div>
+          </div>
+          <div class="fleet-price-row">
+            <div>
+              <div class="fleet-price-from" data-i18n="from_text">Mulai dari</div>
+              <div style="display:flex;align-items:baseline;gap:4px;">
+                <div class="fleet-price-val" id="nmaxPrice">Rp 150K</div>
+                <div class="fleet-price-unit" data-i18n="per_day">/hari</div>
+              </div>
+            </div>
+            <button class="btn-fleet-book" onclick="openBookingFor('NMAX/PCX')" data-i18n="btn_book">Book Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- XMAX -->
+      <div class="fleet-card" data-type="maxi" data-aos data-aos-delay="160">
+        <div class="fleet-card-img-wrap">
+          <img
+            src="https://sspark.genspark.ai/cfimages?u1=BiwPQQEkY1OX2TjGIpO%2FDMgFDbIWsFobwaLvjAmuVhplJTHEpUmwS2o5ImH7TEC12qNU51Vhe5s47qgagwHzOhHmqfwiCQjbUah37yznvw%3D%3D&u2=Dz8KgjvlkNBZj%2FKX&width=2560"
+            alt="Yamaha XMAX"
+            class="fleet-card-img"
+            loading="lazy"
+          >
+          <span class="fleet-card-badge badge-premium" data-i18n="badge_premium">Premium</span>
+        </div>
+        <div class="fleet-card-body">
+          <div class="fleet-cat" data-i18n="cat_premium">Premium Touring</div>
+          <div class="fleet-name">XMAX 300</div>
+          <div class="fleet-features">
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="xmax_f1">Power dan postur mantap</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="xmax_f2">Cocok untuk long ride</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="xmax_f3">Kesan premium & berkelas</span></div>
+            <div class="fleet-feat"><i class="bi bi-check-circle-fill"></i> <span data-i18n="xmax_f4">Limited availability</span></div>
+          </div>
+          <div class="fleet-price-row">
+            <div>
+              <div class="fleet-price-from" data-i18n="from_text">Mulai dari</div>
+              <div style="display:flex;align-items:baseline;gap:4px;">
+                <div class="fleet-price-val" id="xmaxPrice">Rp 300K</div>
+                <div class="fleet-price-unit" data-i18n="per_day">/hari</div>
+              </div>
+            </div>
+            <button class="btn-fleet-book" onclick="openBookingFor('XMAX')" data-i18n="btn_book">Book Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     PRICING SECTION
+============================================================ -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-tag"><i class="bi bi-tag-fill"></i> <span data-i18n="pricing_tag">Paket Harga</span></div>
+      <h2 class="section-title" data-i18n="pricing_title">Harga Transparan, No Hidden Cost</h2>
+      <p class="section-desc" data-i18n="pricing_desc">Pilih durasi yang paling cocok buat kamu. Semua harga sudah termasuk helm dan asuransi dasar.</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="pricing-controls" data-aos>
+      <!-- Duration toggle -->
+      <div class="duration-toggle">
+        <button class="dur-btn active" data-dur="daily" data-i18n="dur_daily">Harian</button>
+        <button class="dur-btn" data-dur="weekly" data-i18n="dur_weekly">Mingguan</button>
+        <button class="dur-btn" data-dur="monthly" data-i18n="dur_monthly">Bulanan</button>
+      </div>
+
+      <!-- Currency toggle -->
+      <div class="currency-toggle">
+        <span class="active" id="currLabel1">IDR (Rp)</span>
+        <label class="switch" aria-label="Toggle currency">
+          <input type="checkbox" id="currSwitch">
+          <span class="switch-track"></span>
+          <span class="switch-thumb"></span>
+        </label>
+        <span id="currLabel2">USD ($)</span>
+      </div>
+    </div>
+
+    <!-- Pricing cards -->
+    <div class="pricing-grid" data-aos>
+      <!-- Scoopy / Vario -->
+      <div class="pricing-card" data-aos>
+        <div class="pricing-card-icon icon-city">🛵</div>
+        <div class="pricing-card-name">Scoopy / Vario</div>
+        <div class="pricing-card-sub" data-i18n="pc_city_sub">Untuk city ride santai</div>
+        <div class="pricing-price">
+          <span class="price-currency" id="pc1-sym">Rp</span>
+          <span class="price-amount" id="pc1-amount">100K</span>
+          <span class="price-period" id="pc1-period" data-i18n="pc_per_day">/hari</span>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_helmet">Helm gratis</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_insurance">Asuransi dasar</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_delivery">Delivery tersedia</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_24">Support 24/7</span></div>
+        </div>
+        <button class="btn-pricing btn-pricing-ghost" onclick="openBookingFor('Scoopy/Vario')" data-i18n="btn_book">Book Sekarang</button>
+      </div>
+
+      <!-- NMAX / PCX (Featured) -->
+      <div class="pricing-card featured" data-aos data-aos-delay="80">
+        <div style="position:absolute;top:14px;right:14px;">
+          <span style="background:var(--orange);color:white;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:100px;" data-i18n="most_popular">Paling Populer</span>
+        </div>
+        <div class="pricing-card-icon icon-maxi">🏍️</div>
+        <div class="pricing-card-name">NMAX / PCX</div>
+        <div class="pricing-card-sub" data-i18n="pc_maxi_sub">Maxi comfort untuk touring</div>
+        <div class="pricing-price">
+          <span class="price-currency" id="pc2-sym">Rp</span>
+          <span class="price-amount" id="pc2-amount">150K</span>
+          <span class="price-period" id="pc2-period" data-i18n="pc_per_day">/hari</span>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_helmet">Helm gratis</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_insurance">Asuransi dasar</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_delivery">Delivery tersedia</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_24">Support 24/7</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_raincoat">Jas hujan tersedia</span></div>
+        </div>
+        <button class="btn-pricing btn-pricing-primary" onclick="openBookingFor('NMAX/PCX')" data-i18n="btn_book">Book Sekarang</button>
+      </div>
+
+      <!-- XMAX -->
+      <div class="pricing-card" data-aos data-aos-delay="160">
+        <div class="pricing-card-icon icon-premium">👑</div>
+        <div class="pricing-card-name">XMAX 300</div>
+        <div class="pricing-card-sub" data-i18n="pc_premium_sub">Premium touring experience</div>
+        <div class="pricing-price">
+          <span class="price-currency" id="pc3-sym">Rp</span>
+          <span class="price-amount" id="pc3-amount">300K</span>
+          <span class="price-period" id="pc3-period" data-i18n="pc_per_day">/hari</span>
+        </div>
+        <div class="pricing-features">
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_helmet">Helm gratis</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_insurance">Asuransi dasar</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_delivery">Delivery tersedia</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_24">Support 24/7</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_raincoat">Jas hujan tersedia</span></div>
+          <div class="pricing-feat"><i class="bi bi-check2-circle"></i> <span data-i18n="inc_priority">Priority booking</span></div>
+        </div>
+        <button class="btn-pricing btn-pricing-ghost" onclick="openBookingFor('XMAX')" data-i18n="btn_book">Book Sekarang</button>
+      </div>
+    </div>
+
+    <p class="pricing-note" data-i18n="pricing_note">
+      * Harga bisa <strong>negotiable</strong> tergantung durasi, stok, dan periode. Chat aja langsung!
+    </p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     HEIGHT-WEIGHT CALCULATOR
+============================================================ -->
+<section id="calculator" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-tag"><i class="bi bi-calculator"></i> <span data-i18n="calc_tag">Smart Recommender</span></div>
+      <h2 class="section-title" data-i18n="calc_title">Cari Scooter yang Pas buat Kamu</h2>
+      <p class="section-desc" data-i18n="calc_desc">Masukkan tinggi dan berat badan kamu — kami rekomendasikan scooter yang paling nyaman dan aman.</p>
+    </div>
+
+    <div class="calc-wrapper" data-aos>
+      <div class="calc-header">
+        <div class="calc-title-row">
+          <div class="calc-icon">📏</div>
+          <div>
+            <div class="calc-title" data-i18n="calc_widget_title">Kalkulator Fisik & Rekomendasi Scooter</div>
+            <div class="calc-subtitle" data-i18n="calc_widget_sub">Temukan scooter yang ergonomis untuk postur tubuh kamu</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-body">
+        <!-- Unit system toggle -->
+        <div class="unit-toggle-row">
+          <label data-i18n="calc_unit_label">Satuan:</label>
+          <div class="unit-group">
+            <button class="unit-btn active" data-unit="metric" data-i18n="unit_metric">cm / kg</button>
+            <button class="unit-btn" data-unit="imperial" data-i18n="unit_imperial">ft / lbs</button>
+          </div>
+        </div>
+
+        <!-- Sliders -->
+        <div class="calc-inputs">
+          <div class="calc-input-group">
+            <div class="calc-input-label">
+              <span data-i18n="calc_height">Tinggi Badan</span>
+              <span>
+                <span class="calc-val" id="heightVal">165</span>
+                <span class="calc-unit-label" id="heightUnit">cm</span>
+              </span>
+            </div>
+            <input type="range" class="calc-slider" id="heightSlider" min="140" max="210" value="165" step="1">
+            <div class="calc-range-row">
+              <span id="heightMin">140 cm</span>
+              <span id="heightMax">210 cm</span>
+            </div>
+          </div>
+
+          <div class="calc-input-group">
+            <div class="calc-input-label">
+              <span data-i18n="calc_weight">Berat Badan</span>
+              <span>
+                <span class="calc-val" id="weightVal">65</span>
+                <span class="calc-unit-label" id="weightUnit">kg</span>
+              </span>
+            </div>
+            <input type="range" class="calc-slider" id="weightSlider" min="40" max="150" value="65" step="1">
+            <div class="calc-range-row">
+              <span id="weightMin">40 kg</span>
+              <span id="weightMax">150 kg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="calc-result" id="calcResult">
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-item-label" data-i18n="bmi_label">BMI Index</div>
+              <div class="result-item-val" id="bmiVal">—</div>
+            </div>
+            <div class="result-item">
+              <div class="result-item-label" data-i18n="bmi_category">Kategori</div>
+              <div class="result-item-val" id="bmiCat" style="font-size:1.1rem;">—</div>
+            </div>
+          </div>
+
+          <div class="result-recommendation">
+            <div class="rec-title" data-i18n="rec_title">🛵 Rekomendasi Scooter</div>
+            <div class="rec-scooter" id="recScooter">—</div>
+            <div class="rec-desc" id="recDesc">—</div>
+          </div>
+        </div>
+
+        <!-- Calculate button -->
+        <button
+          onclick="calculateBMI()"
+          class="btn-primary"
+          style="width:100%;justify-content:center;margin-top:20px;"
+          data-i18n="calc_btn"
+        >
+          <i class="bi bi-calculator-fill"></i> Hitung & Rekomendasikan
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     DELIVERY SECTION
+============================================================ -->
+<section id="delivery" class="section">
+  <div class="container">
+    <div class="delivery-grid">
+      <div class="delivery-text" data-aos>
+        <div class="section-tag"><i class="bi bi-truck"></i> <span data-i18n="del_tag">Layanan Delivery</span></div>
+        <h2 class="section-title" data-i18n="del_title">Delivery ke Hotel / Villa? Bisa.</h2>
+        <p class="section-desc" data-i18n="del_desc">Tinggal kirim lokasi + jam, kita antar unit ke tempatmu. Biar kamu nggak buang waktu cari rental waktu liburan.</p>
+
+        <div class="delivery-features">
+          <div class="del-feat">
+            <div class="del-feat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div class="del-feat-text">
+              <strong data-i18n="del_f1_title">Area Bali (sesuai kesepakatan)</strong>
+              <span data-i18n="del_f1_desc">Canggu, Seminyak, Kuta, Denpasar, Ubud & sekitarnya</span>
+            </div>
+          </div>
+          <div class="del-feat">
+            <div class="del-feat-icon"><i class="bi bi-calendar-check-fill"></i></div>
+            <div class="del-feat-text">
+              <strong data-i18n="del_f2_title">Penjadwalan Fleksibel</strong>
+              <span data-i18n="del_f2_desc">Atur waktu delivery sesuai jam landing atau check-in kamu</span>
+            </div>
+          </div>
+          <div class="del-feat">
+            <div class="del-feat-icon"><i class="bi bi-chat-dots-fill"></i></div>
+            <div class="del-feat-text">
+              <strong data-i18n="del_f3_title">Admin Super Responsif</strong>
+              <span data-i18n="del_f3_desc">Konfirmasi cepat via WhatsApp, no drama</span>
+            </div>
+          </div>
+          <div class="del-feat">
+            <div class="del-feat-icon"><i class="bi bi-box-seam-fill"></i></div>
+            <div class="del-feat-text">
+              <strong data-i18n="del_f4_title">Sudah Termasuk Helm & Dokumen</strong>
+              <span data-i18n="del_f4_desc">Semua lengkap saat unit tiba di lokasi kamu</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="requestDelivery()" data-i18n="btn_req_del">
+          <i class="bi bi-truck"></i> Request Delivery via WhatsApp
+        </button>
+      </div>
+
+      <div class="delivery-card" data-aos data-aos-delay="100">
+        <img
+          src="https://sspark.genspark.ai/cfimages?u1=rZl%2BNL6wD84ZQZxPidIa%2BW%2Bm9WufAFmwBvI2mCov0MM5olQQCkZxXZW2ZqyCMhZ7F4hClEa3QopFcR3v%2FXc%2BE%2FJyJIAdPEtiXLYjwoYDLSKw9oiqJhD2E8IgFTqudZmCfaHjWyTsdUGp61IQXjbwUGyZkGSE4sPiLGE8L%2FYBn9U%2B4A%3D%3D&u2=VBYO%2FhQE7FwkDTZD&width=2560"
+          alt="Scooter delivery Bali"
+          loading="lazy"
+        >
+        <div class="delivery-card-footer">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>
+            <strong data-i18n="del_card_title">Delivery ke mana aja di Bali</strong>
+            <span data-i18n="del_card_sub">Hotel, villa, bandara, port — tinggal bilang!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     ABOUT SECTION
+============================================================ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images" data-aos>
+        <img
+          src="https://sspark.genspark.ai/cfimages?u1=oFrdhlBpUDKzpmefndfVBLSR7MbvsuoflVJUYKr4NdKVUcF1UsxVQg5sDmAJbkbLC0tJ1Jhd4A1DfnwCTMD2ydTic%2FMHXIDahtQzES%2BBXioByeWMK1ilB8THS9ozDJwMlQ%3D%3D&u2=rD3%2B3M3%2FEcOaB0lx&width=2560"
+          alt="ABD Scooter Rental Bali"
+          class="about-img-main"
+          loading="lazy"
+        >
+        <img
+          src="https://sspark.genspark.ai/cfimages?u1=XqGWr8tLWDL%2B4j6R9zFlwOVaBmr2eG%2BJNRUekNDkjVx3%2Bh1yQFD%2FPxGVeEMwXuHUhAhoq6LfIStavzzuclCrRuzvA3%2FBzGZgKtddp1P%2Ba8I%3D&u2=FuzUman7Vri5cMDQ&width=2560"
+          alt="XMAX Bali"
+          class="about-img-second"
+          loading="lazy"
+        >
+        <div class="about-badge">🛵 Since 2020</div>
+      </div>
+
+      <div class="about-text" data-aos data-aos-delay="100">
+        <div class="section-tag"><i class="bi bi-info-circle"></i> <span data-i18n="about_tag">Tentang Kami</span></div>
+        <h2 class="section-title" data-i18n="about_title">ABD Scooter Rental</h2>
+        <p class="section-desc" style="text-align:left;margin:0 0 16px;" data-i18n="about_tagline">
+          Bali, but make it freedom. 🌴
+        </p>
+        <p class="about-body" data-i18n="about_body">
+          ABD Scooter Rental hadir untuk memberikan solusi transportasi yang praktis dan andal bagi siapapun yang ingin menjelajahi Bali dengan kebebasan penuh. Kami menawarkan koleksi scooter terawat yang nyaman untuk perjalanan wisata maupun aktivitas harian.
+          <br><br>
+          Layanan kami mencakup sewa harian, mingguan, dan bulanan dengan proses booking yang simpel dan cepat. Kami juga menyediakan layanan delivery ke hotel, villa, dan lokasi pilihan di seluruh Bali.
+        </p>
+
+        <div class="about-stats-grid">
+          <div class="about-stat">
+            <div class="about-stat-val">500+</div>
+            <div class="about-stat-label" data-i18n="stat_customers">Customers</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">4.9★</div>
+            <div class="about-stat-label" data-i18n="stat_rating">Rating</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-val">3+</div>
+            <div class="about-stat-label" data-i18n="stat_years">Tahun Pengalaman</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-tag"><i class="bi bi-star-fill"></i> <span data-i18n="testi_tag">Ulasan Pelanggan</span></div>
+      <h2 class="section-title" data-i18n="testi_title">Kata Mereka tentang ABD</h2>
+      <p class="section-desc" data-i18n="testi_desc">Ribuan rider sudah mempercayakan perjalanan Bali mereka kepada kami. Ini ceritanya.</p>
+    </div>
+
+    <div class="testimonials-grid" data-aos>
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_1">"Best Bali bike rental indeed! Complete collection of bikes, friendly staffs, seamless processes. Definitely the best Bali bike rental in Canggu and Seminyak area."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div>
+            <div class="testi-name">Dion</div>
+            <div class="testi-country"><span>🇳🇱</span> Netherlands</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_2">"Great service! Responsive staff, bikes in a very good condition. Will be coming back again and can definitely recommend to everyone visiting Bali."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--teal),#0891b2);">D</div>
+          <div>
+            <div class="testi-name">Daria Grebneva</div>
+            <div class="testi-country"><span>🇷🇺</span> Russia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_3">"Super easy booking via WhatsApp. The NMAX was in perfect condition, delivered right to my villa in Seminyak. 100% will use again next trip!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed);">M</div>
+          <div>
+            <div class="testi-name">Marcus W.</div>
+            <div class="testi-country"><span>🇦🇺</span> Australia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_4">"Sehr guter Service! Das Motorrad war in top Zustand und die Lieferung zum Hotel hat perfekt geklappt. Transparent pricing, keine versteckten Kosten!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#16a34a,#15803d);">H</div>
+          <div>
+            <div class="testi-name">Hannah K.</div>
+            <div class="testi-country"><span>🇩🇪</span> Germany</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_5">"Harga yang sangat bersahabat! Sewa sebulan penuh, NMAX terawat banget. Staff responsif dan proses booking cepat. Wajib coba kalau ke Bali!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#ea580c,#c2410c);">A</div>
+          <div>
+            <div class="testi-name">Arya S.</div>
+            <div class="testi-country"><span>🇮🇩</span> Indonesia</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-stars">
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        </div>
+        <p class="testi-text" data-i18n="testi_6">"Excellent! The XMAX was exactly what I needed for my 2-week Bali trip. Powerful, comfortable, and the delivery to Ubud was seamless. Highly recommend!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#0284c7,#0369a1);">S</div>
+          <div>
+            <div class="testi-name">Sophie L.</div>
+            <div class="testi-country"><span>🇫🇷</span> France</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================
+     FAQ SECTION
+============================================================ -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-tag"><i class="bi bi-question-circle"></i> FAQ</div>
+      <h2 class="section-title" data-i18n="faq_title">Pertanyaan yang Sering Muncul</h2>
+      <p class="section-desc" data-i18n="faq_desc">Biar kamu makin yakin sebelum booking. Kalau masih ada yang belum jelas, chat aja langsung!</p>
+    </div>
+
+    <div class="faq-list" data-aos>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q1">Bisa sewa harian / mingguan / bulanan?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a1">Bisa. Kamu tinggal pilih durasi yang paling cocok — harga mengikuti durasi (lihat bagian Harga). Untuk sewa bulanan, harga bisa sangat kompetitif dan negotiable.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q2">Bisa delivery ke hotel/villa?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a2">Bisa. Kirim lokasi + jam yang diinginkan via WhatsApp, nanti kami atur pengantaran sesuai kesepakatan. Kami melayani area Canggu, Seminyak, Kuta, Denpasar, Ubud, dan sekitarnya.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q3">Harga bisa nego?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a3">Bisa negotiable untuk beberapa kondisi seperti durasi panjang, booking beberapa unit sekaligus, atau periode low season. Chat aja biar kita bisa cocokkan harga terbaik!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q4">Cara booking paling cepat gimana?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a4">Klik tombol "Booking Cepat" atau "Book Sekarang", isi form singkat, lalu pesan otomatis terformat akan dikirim ke WhatsApp kami. Prosesnya cepat, nggak ribet!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q5">Dokumen apa yang diperlukan?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a5">Cukup KTP/Paspor dan SIM (A atau internasional). Kami akan menyiapkan rental agreement yang jelas dan transparan, mencakup data kendaraan, periode sewa, dan aturan penggunaan.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q6">Apakah ada deposit?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a6">Ada deposit kecil sebagai jaminan, dikembalikan penuh saat pengembalian unit dalam kondisi baik. Detail deposit akan dikomunikasikan saat konfirmasi booking.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFAQ(this)">
+          <span data-i18n="faq_q7">Pembayaran bisa pakai USD?</span>
+          <span class="faq-icon"><i class="bi bi-plus"></i></span>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner" data-i18n="faq_a7">Bisa! Kami menerima pembayaran dalam IDR (Rupiah) maupun USD (Dollar). Kurs akan disesuaikan saat konfirmasi booking. Toggle harga di atas bisa membantu kamu melihat estimasi harga dalam USD.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION
+============================================================ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner" data-aos>
+      <div class="cta-icon">🛵</div>
+      <h2 class="cta-title" data-i18n="cta_title">Siap Explore Bali?</h2>
+      <p class="cta-desc" data-i18n="cta_desc">Booking sekarang via WhatsApp — proses cepat, unit siap jalan, dan kami siap antar ke lokasi kamu.</p>
+      <div class="cta-buttons">
+        <button class="btn-wa" onclick="openWhatsApp()">
+          <i class="bi bi-whatsapp"></i>
+          <span data-i18n="btn_chat_wa">Chat via WhatsApp</span>
+        </button>
+        <button class="btn-primary" id="ctaBookBtn">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <span data-i18n="btn_quick_book">Booking Cepat</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="navbar-brand" style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <div class="brand-icon">🛵</div>
+          <div class="brand-text" style="font-family:Poppins,sans-serif;font-weight:800;font-size:1.1rem;">ABD <span style="color:var(--orange);">Scooter</span> Rental</div>
+        </div>
+        <p class="footer-tagline" data-i18n="footer_tagline">Solusi transportasi praktis untuk menjelajahi Bali dengan kebebasan penuh. Scooter terawat, harga transparan, delivery ke mana aja.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn" aria-label="WhatsApp" onclick="openWhatsApp()"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_services">Layanan</div>
+        <div class="footer-links">
+          <a href="#fleet" data-i18n="footer_daily">Sewa Harian</a>
+          <a href="#fleet" data-i18n="footer_weekly">Sewa Mingguan</a>
+          <a href="#fleet" data-i18n="footer_monthly">Sewa Bulanan</a>
+          <a href="#delivery" data-i18n="footer_delivery_link">Delivery Service</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_info">Informasi</div>
+        <div class="footer-links">
+          <a href="#about" data-i18n="footer_about">Tentang Kami</a>
+          <a href="#pricing" data-i18n="footer_pricing">Harga & Paket</a>
+          <a href="#faq" data-i18n="footer_faq">FAQ</a>
+          <a href="#testimonials" data-i18n="footer_testi">Ulasan</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title" data-i18n="footer_contact">Kontak</div>
+        <div class="footer-contact-item">
+          <i class="bi bi-whatsapp"></i>
+          <span>+62 8XX-XXXX-XXXX</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <span>hello@abdscooter.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span data-i18n="footer_location">Bali, Indonesia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">© 2024 ABD Scooter Rental. All rights reserved.</span>
+      <span>Made with ❤️ in Bali 🌴</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOOKING MODAL
+============================================================ -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" data-i18n="modal_title">🛵 Booking Cepat</div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_name">Nama Lengkap</label>
+        <input type="text" class="form-control" id="bookName" placeholder="John Doe">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_whatsapp">Nomor WhatsApp</label>
+          <input type="tel" class="form-control" id="bookWA" placeholder="+62...">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_scooter">Pilih Scooter</label>
+          <select class="form-control" id="bookScooter">
+            <option>Scoopy / Vario</option>
+            <option>NMAX / PCX</option>
+            <option>XMAX 300</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_start">Tanggal Mulai</label>
+          <input type="date" class="form-control" id="bookStart">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_end">Tanggal Selesai</label>
+          <input type="date" class="form-control" id="bookEnd">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_location">Lokasi Delivery (Hotel/Villa)</label>
+        <input type="text" class="form-control" id="bookLocation" placeholder="e.g. Potato Head Beach Club, Seminyak">
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="form_notes">Catatan Tambahan</label>
+        <textarea class="form-control" id="bookNotes" rows="2" placeholder="Anything else?"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-submit" onclick="submitBooking()">
+        <i class="bi bi-whatsapp"></i> <span data-i18n="btn_send_wa">Kirim via WhatsApp</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="toastMsg">Dikirim ke WhatsApp!</span>
+</div>
+
+<!-- JavaScript -->
+<script src="assets/js/app.js"></script>
+</body>
+</html>
